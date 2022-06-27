@@ -25,16 +25,19 @@ vector<int> construtivo(){
     
     // Custos de cada Nó para outro Nó
     // Custo de ij = ji
+    // Bases: [[-0.0, 6], [-2, 5], [-3.25, 0.0], [-4, 3], [-6, 1]]
     vector<vector<int>> costs = {
-        {0,40,20,100},
-        {40,0,50,10},
-        {20,50,0,10},
-        {100,10,10,0}
+        {0,1,10,10,10,2},
+        {1,0,1,10,10,10},
+        {10,1,0,1,10,10},
+        {10,10,1,0,1,10},
+        {10,10,10,1,0,1},
+        {2,10,10,10,1,0},
     };
     
     // Solucao inicial aleatória,
     // Mesmo mudando os valores do nó, a solucao será a mesma
-    vector<int> vertices = { 2, 3, 4};
+    vector<int> vertices = { 3, 2, 4,6,5};
     vector<int> sol = {1};
     int solCost = 0;
 
